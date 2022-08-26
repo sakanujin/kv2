@@ -1,0 +1,31 @@
+BoxLayout:
+    font_name: './mplus-2c-regular.ttf'
+    orientation: 'vertical' 
+    filename:'' 
+    GridLayout:
+        rows:2
+        cols:2 
+    ToggleButton: 
+        text:'バルセロナ' 
+        filename:'Ba.jpg'
+    ToggleButton: 
+        text:'ベルリン' 
+        filename:'Be.jpg' 
+    ToggleButton: 
+        text:'石巻' 
+        filename:'Is.jpg' 
+    ToggleButton: 
+        text:'小樽' 
+        filename:'Ot.jpg' 
+    Image: 
+        size_hint_y:5 
+        source:root.filename 
+
+<ToggleButton@ToggleButton>
+    font_name: './mplus-2c-regular.ttf'
+    font_size:24 
+    group:'image' 
+    filename:'' 
+    on_state: 
+        if self.state=='down':app.root. filename=self.filename
+

@@ -1,0 +1,28 @@
+<Otameshi>
+    BoxLayout:
+        orientation:'vertical'
+        size:root.size
+        padding:(100,100)
+        Label:
+            id: lab1
+            text: self.text
+            font_size: 80
+        RoundedToggleButton:
+            size: 100, 200
+            text: 'zettai osunayo'
+            pos: 0,0
+            font_size: 80
+            on_press: root.ids['lab1'].text='osunatte'
+            on_release: root.ids['lab1'].text=''
+<RoundedToggleButton@ToggleButton>
+    background_color:(0,0,0,0)
+    background_normal:''
+    text_size: self.width, None
+    halign: 'center'
+    canvas.before:
+        Color:
+            rgba:(255/255,0/255,102/255,1) if self.state=='down' else (48/255,84/255,150/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[18]

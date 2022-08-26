@@ -1,0 +1,16 @@
+<Otameshi>
+    BoxLayout:
+        orientation:'vertical'
+        size:root.size
+        padding:(100,100)
+        Label:
+            id: lab1
+            text: self.text
+            font_size: 80
+        Button:
+            size: 100, 200
+            text: 'zettai osunayo'
+            pos: 0,0
+            font_size: 80
+            on_press: root.ids['lab1'].text='osunatte'
+            on_release: root.ids['lab1'].text=''
